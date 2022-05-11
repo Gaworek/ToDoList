@@ -1,4 +1,4 @@
-import './App.css';
+import './ToDoPanel.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {useState, useRef, useEffect, useLayoutEffect} from 'react'
 import Button from 'react-bootstrap/Button'
@@ -8,7 +8,7 @@ import Modal from 'react-bootstrap/Modal'
 import Alert from 'react-bootstrap/Alert'
 import ToDoList from './ToDoList'
 import {v4} from 'uuid'
-function App() {
+function ToDoPanel() {
   const [listOfToDos, setlistOfToDos] = useState([])
   const [showConfirmation, setShowConfirmation] = useState(false)
   const toDoRef = useRef()
@@ -89,7 +89,7 @@ function App() {
 
   
   return (
-  <div className = 'App'>
+  <div className = 'ToDoPanel'>
     <Form onSubmit={handleSubmit}>
       <Stack gap={2} >
         <Form.Label className='text-center'>Nowe zadanie</Form.Label>
@@ -139,4 +139,4 @@ function App() {
   );
 }
 
-export default App;
+export default ToDoPanel;
